@@ -2,12 +2,27 @@ package BlackJack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class BlackJack {
     public static void main(String[] args) {
         ArrayList<String> deck = createDeck();
         System.out.println(Arrays.toString(deck.toArray()));
+
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        while (!input.equals("-1")){
+            playGame();
+            input = scanner.nextLine();
+        }
+
     }
+
+    private static void playGame(){
+
+    }
+
 
     private static ArrayList<String> createDeck() {
         // Create two arrays that hold the suites and values
